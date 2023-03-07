@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle PlaceHolder</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container {
+            border: 2px solid;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        button {
+            background-color: #edeef6;
+            border-radius: 5px;
+            width: 200px;
+            padding: 10px 0px;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        .info {
+            background-color: #47a386;
+            margin: 10px 0px;
+            color: white;
+            opacity: 1;
+            pointer-events: none;
+        }
+        .info-hide{
+            opacity: 0;
+            
+        }
+        .info p {
+            font-size: 15px;
+            margin: 15px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <button class="toggle">Toggle PlaceHolder</button>
+        <div class="info info-hide">
+            <p>JavaScript was initially created as a browser-only language, but it is now used in many other environments
+                as well. Today, JavaScript has a unique position as the most widely-adopted browser language, fully
+                integrated with HTML/CSS</p>
+        </div>
+    </div>
+    <script>
+        
+        console.log("srcipt running");
+
+        document.querySelector('.toggle').addEventListener("click",()=>{
+            document.querySelector('.info').classList.toggle('info-hide');
+        })
+    </script>
+</body>
+
+</html>
